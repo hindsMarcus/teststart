@@ -77,6 +77,8 @@ public class UserFacade {
         }
         return new UserDTO(u);
     }
+
+    //this method returns a list of all users
     public List<UserDTO> getAll(){
         EntityManager em = emf.createEntityManager();
         TypedQuery<User> query = em.createQuery("SELECT u FROM User u", User.class);
